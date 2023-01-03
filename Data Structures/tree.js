@@ -26,7 +26,7 @@ insert(data)
 {
 	// Creating a node and initialising
 	// with data
-	var newNode = new Node(data);
+	let newNode = new Node(data);
 					
 	// root is null then node will
 	// be added to the tree and made root.
