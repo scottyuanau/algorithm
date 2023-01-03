@@ -17,6 +17,7 @@ Sample Output
 
 */
 
+//double for loop, O(N2)
 function twoNumberSum(array, targetSum) {
     // Write your code here.
     for (let i = 0; i < array.length-1; i++) {
@@ -28,3 +29,12 @@ function twoNumberSum(array, targetSum) {
     }
     return []
   }
+//hashmap, O(N)
+function twoNumberSumHash(array, targetSum) {
+  // Write your code here.
+  let hashmap = new Map();
+  let result = [];
+  array.map((item,index)=>hashmap.set(targetSum - item,index));
+  array.map((item)=>hashmap.has(item) & targetSum - item !== item && result.push(item));
+  return result
+}
