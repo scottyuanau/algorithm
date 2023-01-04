@@ -40,4 +40,24 @@ function findThreeLargestNumbers(array) {
     }
     return output;
   }
+
+// O(N) solution
+function findThreeLargestNumbers(array) {
+  // Write your code here.
+  let [s,m,l] = [Number.NEGATIVE_INFINITY, Number.NEGATIVE_INFINITY, Number.NEGATIVE_INFINITY]
+  array.map((number)=>{
+    if (number >= l) {
+      s = m;
+      m = l;
+      l = number;
+    } else if (number >= m && number < l) {
+      s = m;
+      m = number;
+    } else if (number >= s && number < m) {
+      s = number;
+    }
+  })
+  return [s,m,l]
+  
+}
   
