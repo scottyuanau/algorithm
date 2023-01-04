@@ -9,14 +9,18 @@ Sample Output
 true // it's written the same forward and backward
 
 */
+//O(n)
 function isPalindrome(string) {
-    // Write your code here.
-    let arr = string.split('')
-    let result = true;
-    while (result && arr.length > 1) {
-      if (arr.shift() !== arr.pop()) {
+  // Write your code here.
+  let arr = string.split('')
+  let result = true;
+  let mid = Math.floor(arr.length /2);
+  for (let left = 0; left < mid; left++) {
+    let right = arr.length - left -1;
+      if(arr[left] != arr[right]) {
         result = false;
       }
-    }
-    return result
+    
   }
+  return result;
+}
