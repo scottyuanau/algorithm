@@ -23,5 +23,5 @@ function productSum(array,multiplier = 1) {
       sum += array[i]
     }
   }
- return sum*multiplier
+ return sum*multiplier //key is to return the sum times multiplier.
 }
