@@ -28,3 +28,5 @@ function nonConstructibleChange(coins) {
     
     return change;
   }
+
+  console.log(nonConstructibleChange([5, 7, 1, 1, 2, 3, 22]))
