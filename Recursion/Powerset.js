@@ -24,3 +24,16 @@ function powerset(array) {
   })
   return result
 }
+
+//Recusive method
+function powersetRecusive(array) {
+  // Write your code here.
+  if (array.length == 0) {
+    return [[]]
+  } 
+  let lastValue = array.pop();
+  // must set up a new arr to recursively store the value (call stack)
+  let newArr = powerset(array)
+  return newArr.concat(newArr.map((item)=>item.concat(lastValue)))
+  
+}
